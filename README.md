@@ -30,6 +30,7 @@ H-TeamState/
 │   ├── server.js     # API and Socket logic
 │   └── .env          # Server-side secrets (ignored by Git)
 └── .gitignore        # Master ignore file for security
+```
 ---
 
 ## 🚀 Getting Started
@@ -46,6 +47,7 @@ To protect your credentials, sensitive keys are stored in environment variables.
 ```env
 REACT_APP_SUPABASE_URL=your_supabase_url
 REACT_APP_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
 ---
 
