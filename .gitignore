@@ -1,0 +1,13 @@
+# Ignore all node_modules in any directory
+**/node_modules/
+
+# Ignore all environment files
+**/.env
+**/.env.local
+
+# Ignore build folders
+**/build/
+**/dist/
+
+# System files
+.DS_Store
