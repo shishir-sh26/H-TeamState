@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { supabase } from './supabaseClient';
+import { Analytics } from '@vercel/analytics/react';
 import ProjectSetup from './pages/ProjectSetup';
 import Dashboard from './pages/Dashboard';
 import About from './pages/About';
@@ -242,6 +243,7 @@ function App() {
           </button>
         </>
       )}
+      <Analytics />
     </div>
   );
 }
