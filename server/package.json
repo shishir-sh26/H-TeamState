@@ -1,12 +1,18 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "H-TeamState Backend Server",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "express",
+    "socket.io",
+    "realtime"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
