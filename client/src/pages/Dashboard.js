@@ -244,7 +244,22 @@ const taskMainContent = { display: 'flex', gap: '15px', alignItems: 'center' };
 const taskDescription = (done) => ({ textDecoration: done ? 'line-through' : 'none', color: done ? '#475569' : '#fff' });
 const checkboxStyle = { accentColor: '#304792ff', width: '20px', height: '20px' };
 const deleteBtn = { background: 'none', border: 'none', color: '#ef4444', cursor: 'pointer' };
-const centerStyle = { height: '100vh', background: '#020202', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#3f3788ff' };
+const centerStyle = {
+  position: 'fixed',      // makes it stay over the whole screen
+  top: 0,
+  left: 0,
+  width: '100vw',         // full width
+  height: '100vh',        // full height
+  backgroundColor: '#020202', // dark background
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  color: '#3f3788ff',     // visible text color
+  fontSize: '1.5rem',     // bigger text
+  fontWeight: 'bold',     // more emphasis
+  zIndex: 9999            // ensures it stays on top of everything
+};
+
 const flowContainer = { height: 'calc(100vh - 180px)', background: '#050505', borderRadius: '20px', border: '1px solid #1e293b', overflow: 'hidden' };
 
 // CHAT WIDGET STYLES
