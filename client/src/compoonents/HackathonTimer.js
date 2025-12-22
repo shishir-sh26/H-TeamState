@@ -41,16 +41,43 @@ export default function HackathonTimer({ endTime, timerStatus }) {
   }, [endTime, timerStatus]);
 
   return (
-    <div style={timerText}>
+  <>
+    <div style={timerText} className="hackathon-timer">
       {timeLeft}
     </div>
-  );
+
+    <style>{`
+      /* ---------- TIMER ANIMATION ---------- */
+      .hackathon-timer {
+        transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+        animation: timerPulse 1s infinite alternate;
+        cursor: default;
+      }
+
+      .hackathon-timer:hover {
+        transform: scale(1.08);
+        color: #3ecf8e;
+        text-shadow: 0 0 18px rgba(62,207,142,0.6);
+      }
+
+      @keyframes timerPulse {
+        from {
+          opacity: 0.85;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    `}</style>
+  </>
+);
+
 }
 
 const timerText = {
   fontFamily: '"JetBrains Mono", monospace',
   fontSize: '2rem',
   fontWeight: '800',
-  color: '#3ecf8e',
+  color: '#12668dff',
   letterSpacing: '1px'
 };

@@ -36,7 +36,7 @@ export default function ProjectFlow({ projectId, flowData }) {
       style: { 
         background: selectedColor, 
         color: '#fff', 
-        border: '1px solid #3ecf8e', 
+        border: '1px solid #0cb4e7ff', 
         borderRadius: isCircle ? '50%' : '8px',
         clipPath: isDiamond ? 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)' : 'none',
         width: 100,
@@ -155,6 +155,6 @@ const flowSelect = { flex: 1, background: '#000', border: '1px solid #333', colo
 const colorPicker = { width: '40px', height: '34px', padding: '0', border: '1px solid #333', borderRadius: '6px', cursor: 'pointer', background: 'none' };
 
 const baseBtn = { border: 'none', padding: '10px 12px', borderRadius: '6px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', fontSize: '0.75rem', fontWeight: 'bold', transition: '0.2s' };
-const addBtn = { ...baseBtn, background: '#1e293b', color: '#3ecf8e', border: '1px solid #3ecf8e' };
+const addBtn = { ...baseBtn, background: '#1e293b', color: '#121166ff', border: '1px solid #474886ff' };
 const deleteBtn = { ...baseBtn, background: 'rgba(239, 68, 68, 0.1)', color: '#ef4444', border: '1px solid rgba(239, 68, 68, 0.3)' };
-const saveBtn = { ...baseBtn, background: '#3ecf8e', color: '#000' };
+const saveBtn = { ...baseBtn, background: '#3810a7ff', color: '#000' };

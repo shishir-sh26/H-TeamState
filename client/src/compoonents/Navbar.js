@@ -79,7 +79,7 @@ export default function Navbar({ onBack, teamName, projectId, onOpenAbout, userN
         </div>
 
         <div style={statusBadge}>
-          <Activity size={12} style={{ color: '#3ecf8e' }} />
+          <Activity size={12} style={{ color: '#13bee9ff' }} />
           <span>Live Syncing</span>
         </div>
 
@@ -89,7 +89,7 @@ export default function Navbar({ onBack, teamName, projectId, onOpenAbout, userN
             <span style={btnText}>AI Helper</span>
           </button>
           <button 
-            style={{...actionBtn, background: showSettings ? '#3ecf8e' : '#1a1a1a', color: showSettings ? '#000' : '#eee'}} 
+            style={{...actionBtn, background: showSettings ? '#1f7db4ff' : '#1a1a1a', color: showSettings ? '#000' : '#eee'}} 
             onClick={() => setShowSettings(!showSettings)}
             title="Settings"
           >
@@ -128,7 +128,7 @@ export default function Navbar({ onBack, teamName, projectId, onOpenAbout, userN
                 }} 
                 style={settingItemBtn}
               >
-                <div style={settingInfo}><Info size={16} color="#3ecf8e" /><span>About War Room</span></div>
+                <div style={settingInfo}><Info size={16} color="#0b326bff" /><span>About War Room</span></div>
               </button>
 
               <div style={modalDivider} />
@@ -167,5 +167,5 @@ const settingItem = { display: 'flex', justifyContent: 'space-between', alignIte
 const settingItemBtn = { width: '100%', background: 'none', border: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 10px', borderRadius: '8px', cursor: 'pointer', color: '#eee', textAlign: 'left', transition: '0.2s' };
 const settingInfo = { display: 'flex', alignItems: 'center', gap: '12px', fontSize: '0.9rem' };
 const editBtn = { background: '#222', border: '1px solid #333', color: '#888', padding: '4px 8px', borderRadius: '4px', fontSize: '0.7rem', cursor: 'pointer' };
-const saveBtn = { background: '#3ecf8e', border: 'none', color: '#000', padding: '4px 8px', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 'bold', cursor: 'pointer' };
+const saveBtn = { background: '#212a5fff', border: 'none', color: '#000', padding: '4px 8px', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 'bold', cursor: 'pointer' };
 const smallInput = { background: '#000', border: '1px solid #333', color: '#fff', padding: '4px 8px', borderRadius: '4px', fontSize: '0.8rem', width: '120px' };

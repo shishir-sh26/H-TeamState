@@ -216,35 +216,35 @@ const dashboardWrapper = { display: 'flex', background: '#020202', height: '100v
 const mainContainer = { flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' };
 const headerStyle = { display: 'flex', padding: '15px 25px', background: '#0a0a0a', borderBottom: '1px solid #1e293b', alignItems: 'center' };
 const headerLeftSection = { display: 'flex', alignItems: 'center', gap: '30px', width: '100%' };
-const titleStyle = { margin: 0, fontSize: '1.1rem', color: '#3ecf8e', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px' };
+const titleStyle = { margin: 0, fontSize: '1.1rem', color: '#430caaff', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px' };
 const topNav = { display: 'flex', gap: '15px', marginLeft: 'auto' };
 const tabBtn = { background: 'none', border: 'none', color: '#64748b', cursor: 'pointer', fontWeight: '600' };
-const activeTabBtn = { ...tabBtn, color: '#fff', borderBottom: '2px solid #3ecf8e' };
+const activeTabBtn = { ...tabBtn, color: '#fff', borderBottom: '2px solid #30179eff' };
 const scrollArea = { padding: '30px', flex: 1, overflowY: 'auto' };
 const boardLayout = { maxWidth: '1000px', margin: '0 auto' };
 const statsGrid = { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' };
 const glassCard = { background: '#0a0a0a', padding: '20px', borderRadius: '16px', border: '1px solid #1e293b' };
 const label = { margin: '0 0 10px 0', fontSize: '0.65rem', color: '#64748b', textTransform: 'uppercase' };
-const statText = { fontSize: '2.8rem', fontWeight: '800', color: '#3ecf8e' };
+const statText = { fontSize: '2.8rem', fontWeight: '800', color: '#3b09b1ff' };
 const progressBarContainer = { height: '8px', background: '#1e293b', borderRadius: '10px', marginTop: '15px' };
-const progressBar = { height: '100%', background: '#3ecf8e', transition: 'width 0.4s' };
+const progressBar = { height: '100%', background: '#060457ff', transition: 'width 0.4s' };
 const timerContainer = { display: 'flex', justifyContent: 'space-between', alignItems: 'center' };
 const timerActions = { display: 'flex', alignItems: 'center' };
 const timerInputGroup = { display: 'flex', background: '#111', padding: '5px', borderRadius: '8px' };
 const smallInput = { width: '40px', background: 'transparent', border: 'none', color: '#3ecf8e', textAlign: 'center' };
-const startBtn = { background: '#3ecf8e', border: 'none', borderRadius: '4px', cursor: 'pointer' };
+const startBtn = { background: '#0d2a68ff', border: 'none', borderRadius: '4px', cursor: 'pointer' };
 const btnIcon = { background: 'transparent', border: 'none', cursor: 'pointer' };
 const entryGrid = { display: 'flex', gap: '10px' };
 const darkInput = { background: '#111', border: '1px solid #1e293b', color: '#fff', padding: '12px', borderRadius: '10px', flex: 1 };
 const darkSelect = { background: '#111', border: '1px solid #1e293b', color: '#fff', padding: '10px', borderRadius: '10px', cursor: 'pointer' };
-const addBtn = { background: '#3ecf8e', border: 'none', borderRadius: '10px', padding: '0 20px', cursor: 'pointer' };
+const addBtn = { background: '#445281ff', border: 'none', borderRadius: '10px', padding: '0 20px', cursor: 'pointer' };
 const taskListContainer = { marginTop: '25px' };
 const taskRow = { display: 'flex', justifyContent: 'space-between', padding: '16px', background: '#0a0a0a', border: '1px solid #1e293b', borderRadius: '14px', marginBottom: '12px' };
 const taskMainContent = { display: 'flex', gap: '15px', alignItems: 'center' };
 const taskDescription = (done) => ({ textDecoration: done ? 'line-through' : 'none', color: done ? '#475569' : '#fff' });
-const checkboxStyle = { accentColor: '#3ecf8e', width: '20px', height: '20px' };
+const checkboxStyle = { accentColor: '#304792ff', width: '20px', height: '20px' };
 const deleteBtn = { background: 'none', border: 'none', color: '#ef4444', cursor: 'pointer' };
-const centerStyle = { height: '100vh', background: '#020202', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#3ecf8e' };
+const centerStyle = { height: '100vh', background: '#020202', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#3f3788ff' };
 const flowContainer = { height: 'calc(100vh - 180px)', background: '#050505', borderRadius: '20px', border: '1px solid #1e293b', overflow: 'hidden' };
 
 // CHAT WIDGET STYLES
@@ -256,4 +256,105 @@ const msg = { padding: '8px 12px', borderRadius: '12px', fontSize: '0.8rem', max
 const msgMeta = { fontSize: '0.6rem', color: '#444', marginBottom: '2px' };
 const chatInputArea = { padding: '15px', borderTop: '1px solid #111', display: 'flex', gap: '8px' };
 const chatInput = { background: '#000', border: '1px solid #111', color: '#fff', flex: 1, padding: '8px 12px', borderRadius: '8px', fontSize: '0.8rem' };
-const sendBtn = { background: '#3ecf8e', border: 'none', borderRadius: '8px', padding: '8px', cursor: 'pointer' };
+const sendBtn = { background: '#3981d3ff', border: 'none', borderRadius: '8px', padding: '8px', cursor: 'pointer' };
+<style>{`
+/* ---------- GLOBAL TRANSITIONS ---------- */
+button, input, select {
+  transition: all 0.25s ease;
+}
+
+/* ---------- HEADER & TABS ---------- */
+nav button:hover {
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+nav button {
+  position: relative;
+}
+
+nav button::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #30179eff;
+  transition: width 0.3s ease;
+}
+
+nav button:hover::after {
+  width: 100%;
+}
+
+/* ---------- GLASS CARDS ---------- */
+div[style*="border-radius: 16px"],
+div[style*="border-radius: 14px"],
+div[style*="border-radius: 20px"] {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div[style*="border-radius: 16px"]:hover,
+div[style*="border-radius: 14px"]:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(99,102,241,0.15);
+}
+
+/* ---------- TASK ROW ---------- */
+div[style*="margin-bottom: 12px"]:hover {
+  background: #0f172a;
+  transform: scale(1.01);
+}
+
+/* ---------- BUTTONS ---------- */
+button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ---------- ADD TASK BUTTON ---------- */
+button[style*="border-radius: 10px"]:hover {
+  box-shadow: 0 0 20px rgba(68,82,129,0.6);
+}
+
+/* ---------- CHAT FLOAT BUTTON ---------- */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(62,207,142,0.5); }
+  70% { box-shadow: 0 0 0 20px rgba(62,207,142,0); }
+  100% { box-shadow: 0 0 0 0 rgba(62,207,142,0); }
+}
+
+button[style*="position: fixed"][style*="border-radius: 50%"] {
+  animation: pulse 2.5s infinite;
+}
+
+/* ---------- CHAT MESSAGES ---------- */
+div[style*="max-width: 80%"] {
+  animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- FLOW CANVAS ---------- */
+div[style*="overflow: hidden"] {
+  transition: box-shadow 0.3s ease;
+}
+
+div[style*="overflow: hidden"]:hover {
+  box-shadow: 0 0 30px rgba(48,23,158,0.4);
+}
+`}</style>
