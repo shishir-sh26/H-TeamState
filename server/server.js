@@ -12,7 +12,7 @@ const app = express();
  */
 const allowedOrigins = [
   "http://localhost:3000", 
-  "https://your-app-name.vercel.app" 
+  "https://h-teamstate.vercel.app/" 
 ];
 
 app.use(cors({
